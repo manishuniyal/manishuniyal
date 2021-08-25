@@ -9,7 +9,7 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/python.py",
+            "program": "${workspaceFolder}/cricket.py",
             "args": [
                 "runserver"
             ],
