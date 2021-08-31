@@ -4,12 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {"name":"Python: Django","type":"python","request":"launch","program":"${workspaceFolder}/python.py","args":["runserver"],"django":true},
+        {"name":"Python: Django","type":"python","request":"launch","program":"${workspaceFolder}/lcm.py","args":["runserver"],"django":true},
         {
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/cricket.py",
+            "program": "${workspaceFolder}/lcm.py",
             "args": [
                 "runserver"
             ],
