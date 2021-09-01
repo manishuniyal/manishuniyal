@@ -1,5 +1,6 @@
-
-
+from abc import ABC,abstractmethod
+from math import factorial
+n=int(input())
 
 class Fun1:
     def fun1(self):
@@ -44,7 +45,7 @@ class Fun2:
 
 
 
-class Fun3 (Fun1,Fun2):
+class Fun3 ():
     def __init__(self):
         for i in range(n):
             for j in range(n-i-1):
@@ -55,11 +56,58 @@ class Fun3 (Fun1,Fun2):
             print("")    
 
 
+class Pascal(ABC):
+    @abstractmethod
+    def pascal(self):pass
+
+class Fun4(Fun1,Fun2,Fun3, Pascal ):
+    def pascal(self):
+        for i in range(n):
+            
+            for j in range(n-i+1):
+
+                # for left spacing
+                print(" ", end="  ")
+
+            for j in range(i+1):
+
+                # nCr = n!/((n-r)!*r!)
+                print(factorial(i)//(factorial(j)*factorial(i-j)), end="      ")
+
+            # for new line
+            print()
+
+    def fun4(self):
+
+        c=n
+        for i in  range (n):
+
+            c-=1
+            for j in range(n*2):
+                
+                print(" ", end="")
+        
+            for j in range(i):
+                print(" ",end="")
+            for j in  range(c*2+1,0,-1 ):
+                print("*", end="")
+            
+            print("")
+        for i in range(n):
+            for j in range(n*3-i-1):
+                print(" ", end="")
+
+            for j  in range(i*2+1):
+                print("*", end="")
+            print("")
+    def t(): 
+        pass       
+
+ # Print Pascal's Triangle in Python
 
 
-n=int(input())
+       
 
-
-f3=Fun3()
-f3.pub(n)
-
+ 
+f4=Fun4()
+f4.pascal()
