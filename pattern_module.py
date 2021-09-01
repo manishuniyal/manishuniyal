@@ -40,6 +40,16 @@ class Fun2:
             for j in range(n,0,-1):
                 print("*", end="")
             print("") 
+    def __factorial(self , n):
+        # return 1 if (n==0 or n==1) else self.__factorial(n-1)*n
+        if n==0 or n==1:
+            return 1
+        else:
+            return self.__factorial(n-1)*n 
+
+    def pub_fact(self, n):
+        return self.__factorial(n)        
+
     def pub(self, t):
             return self.__fun2(t)
 
@@ -54,6 +64,8 @@ class Fun3 ():
             for i  in range(i+1):
                 print("*", end="") 
             print("")    
+      
+
 
 
 class Pascal(ABC):
@@ -105,9 +117,16 @@ class Fun4(Fun1,Fun2,Fun3, Pascal ):
 
  # Print Pascal's Triangle in Python
 
-
-       
-
- 
+'''
 f4=Fun4()
+print("Factorial of {} is {}".format( n, f4.pub_fact(n)))
+
 f4.pascal()
+f4.fun1()
+f4.fun4()
+f4.pub(n)
+'''
+
+output1= [i for i in range(n) if i%2==0 ]
+output2={i:i**3 for i in range(n) if i%2!=0 }
+print(output2)
